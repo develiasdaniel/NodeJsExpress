@@ -44,6 +44,8 @@ const router: Router = Router();
  */
 router.get('/users', UserFacade.findAll);
 
+router.post('/users', UserFacade.findAll);
+
 /**
  * GET method route
  * @example http://localhost:PORT/home/ping
