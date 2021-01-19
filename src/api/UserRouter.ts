@@ -44,7 +44,13 @@ const router: Router = Router();
  */
 router.get('/users', UserFacade.findAll);
 
-router.post('/users', UserFacade.findAll);
+router.post('/users', UserFacade.addUser);
+
+router.put('/users', UserFacade.updateUser);
+
+router.delete('/users/:id', UserFacade.deleteUser);
+
+router.get('/users/:id', UserFacade.findUserById);
 
 /**
  * GET method route
