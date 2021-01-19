@@ -12,8 +12,6 @@ const UserService: IUserService = {
    * @memberof UserFacade
    */
   async findAll(): Promise<any[]> {
-    console.log(User.findAll);
-
     return User.findAll();
   },
 

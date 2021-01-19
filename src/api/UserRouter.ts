@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import { UserFacade } from '../facade';
+import { Router } from "express";
+import { UserFacade } from "../facade";
 
 /**
  * @constant {express.Router}
@@ -42,15 +42,15 @@ const router: Router = Router();
  *              logged: false
  *              message: Email already exists
  */
-router.get('/users', UserFacade.findAll);
+router.get("/users", UserFacade.findAll);
 
-router.post('/users', UserFacade.addUser);
+router.post("/users", UserFacade.addUser);
 
-router.put('/users', UserFacade.updateUser);
+router.put("/users", UserFacade.updateUser);
 
-router.delete('/users/:id', UserFacade.deleteUser);
+router.delete("/users/:id", UserFacade.deleteUser);
 
-router.get('/users/:id', UserFacade.findUserById);
+router.get("/users/:id", UserFacade.findUserById);
 
 /**
  * GET method route
@@ -88,8 +88,8 @@ router.get('/users/:id', UserFacade.findUserById);
  *              logged: false
  *              message: Email already exists
  */
-router.get('/ping', async (req, res) => {
-    res.send('pong');
+router.get("/ping", async (req, res) => {
+  res.send("pong");
 });
 
 /**
