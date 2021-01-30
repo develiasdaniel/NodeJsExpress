@@ -16,8 +16,6 @@ export async function findAll(
   next: NextFunction
 ): Promise<void> {
   try {
-    console.log("pin", req.params);
-
     const users: any[] = await UserFacade.findAll();
     res.status(HttpStatusCode.OK).json(users);
   } catch (error) {

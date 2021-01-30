@@ -92,6 +92,15 @@ router.get("/ping", async (req, res) => {
   res.send("pong");
 });
 
+router.get("/test", async (req, res) => {
+  const user = {
+    id: 11,
+    name: "Elias Daniel",
+    lastname: "Sanchez Lopez"
+  }
+  res.send(user);
+});
+
 /**
  * @export {express.Router}
  */

@@ -10,8 +10,6 @@ try {
   swaggerDoc = require("../../../swagger.json");
   // swaggerDoc = require("../../swagger.json");
 } catch (error) {
-  console.log(error);
-  
   console.log("***************************************************");
   console.log("  Seems like you doesn`t have swagger.json file");
   console.log("  Please, run: ");
@@ -53,6 +51,15 @@ export function init(app: express.Application): void {
    * @constructs
    */
   app.use("/home", UserRouter);
+
+  app.get("/test", async (req, res) => {
+    const user = {
+      id: 5,
+      name: "Elias Daniel",
+      lastname: "Sanchez Lopez"
+    }
+    res.send(user);
+  });
 
   /**
    * @description
